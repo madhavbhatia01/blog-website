@@ -46,6 +46,21 @@ p{
 
 .footer p {
 	margin-top: 25px;
-	font-size: 12px;
+	font-size: 16px;
   color: #fff;
+}
+
+.read-more{
+    color: #777777;
+}
+
+.read-more:hover{
+    color: #1abc9c;
+}
+
+@media only screen and (max-width: 768px) {
+  .container{
+    max-height: calc(100vh - 280px);
+    overflow: scroll;
+  }
 }

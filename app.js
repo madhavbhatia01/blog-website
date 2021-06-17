@@ -1,8 +1,9 @@
 //jshint esversion:6
-
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const mongoose = require("mongoose");
 const _ = require("lodash");
 
 let arr = [];
@@ -17,10 +18,24 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+// mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(process.env.SECRET, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+
+const postSchema = {
+   heading: String,
+   content: String
+};
+
+const Post = mongoose.model("Post", postSchema);
 
 
 app.get("/" , function(req,res){
-  res.render("home" , {text: homeStartingContent , posts: arr});
+  Post.find({}, function(err, foundItems){
+    if(err){console.log(err);}
+    else{
+      res.render("home" , {text: homeStartingContent , posts: foundItems});
+    }
+  })
 })
 
 app.get("/about" , function(req,res){
@@ -36,20 +51,37 @@ app.get("/compose" , function(req,res){
 })
 
 app.post("/compose" , function(req,res){
-  const post = {
-    heading : req.body.Heading,
-    content : req.body.Body
-  }
-  arr.push(post);
-  res.redirect("/");
+  const post = new Post ({
+     heading: req.body.Heading,
+     content: req.body.Body
+   });
+   post.save(function(err){
+     if (!err){
+       res.redirect("/");
+     }
+   });
+
+  // const post = {
+  //   heading : req.body.Heading,
+  //   content : req.body.Body
+  // }
+  // arr.push(post);
+  // res.redirect("/");
 })
 
 app.get("/posts/:val" , function(req,res){
-  arr.forEach(function(Post){
-    if( _.lowerCase(req.params.val) == _.lowerCase(Post.heading) ){
-      res.render("post" , {heading: Post.heading , text : Post.content});
+  // arr.forEach(function(Post){
+  //   if( _.lowerCase(req.params.val) == _.lowerCase(Post.heading) ){
+  //     res.render("post" , {heading: Post.heading , text : Post.content});
+  //   }
+  // })
+
+  Post.findOne({_id: req.params.val}, function(err, foundItem){
+    if(!err){
+      res.render("post" , {heading: foundItem.heading , text : foundItem.content});
     }
   })
+
 })
 
 
