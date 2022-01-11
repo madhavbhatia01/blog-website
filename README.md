@@ -3,10 +3,11 @@ A blog website. Responsive over different screen sizes.<br />
 **As it is hosted on free to use service Glitch, it can take about 10-15 seconds for the website to wake up.**
 <br/>
 
-<img width="1440" alt="Screenshot 2021-06-17 at 12 29 10 PM" src="https://user-images.githubusercontent.com/71606419/122347562-c8a88300-cf67-11eb-979a-55fd06dc691e.png">
+<img width="1440" alt="Screenshot 2022-01-11 at 3 45 07 PM" src="https://user-images.githubusercontent.com/71606419/148924488-3ed5cf33-0723-4d46-a436-3c859dd1ba25.png">
+
 <br /><br />
 **Each blog also has a separate page**
-<img width="1440" alt="Screenshot 2021-06-17 at 12 28 08 PM" src="https://user-images.githubusercontent.com/71606419/122347654-e675e800-cf67-11eb-80f5-ab66297692f0.png">
+<img width="1440" alt="Screenshot 2022-01-11 at 3 45 18 PM" src="https://user-images.githubusercontent.com/71606419/148924419-297d0066-cfa5-4c8b-b28d-29732893a933.png">
 <br /><br />
 **Compose page to add new posts**
-<img width="1437" alt="Screenshot 2021-06-17 at 12 27 47 PM" src="https://user-images.githubusercontent.com/71606419/122347666-ea096f00-cf67-11eb-86e7-34a1959b726b.png">
+<img width="1440" alt="Screenshot 2022-01-11 at 3 45 26 PM" src="https://user-images.githubusercontent.com/71606419/148924328-ff0ba1a9-c564-4d26-a434-0bb724639d52.png">
