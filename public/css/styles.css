@@ -1,66 +1,108 @@
-body{
-  font-family: 'Inconsolata', monospace;
-
+body {
+  font-family: "Inconsolata", monospace;
 }
 
-p{
+p {
   font-size: 17px;
+}
+.pp{
+  text-align:center;
+}
+.hh{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+.gg {
+  max-width:calc(45vw) ;
+  max-height: calc(45vh);
+  display: block;
+   margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-bottom:10px;
+}
+.cc{
+  width:calc(18vw) ;
+  height: calc(22vh);
+  border-radius: 50%;
+  object-fit: cover;
+/*   margin:10px; */
+}
+
+
+.homeall{
+  display:grid;
+  grid-template-columns: 20vw 60vw;
+  grid-gap: 23px;
+}
+
+.hometext{
+  padding:20px;
+  margin:10px;
 }
 
 .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .navbar {
-    font-family: 'Open Sans', sans-serif;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
 }
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
 }
 
 .footer-padding {
-	padding-bottom: 60px;
+  padding-bottom: 60px;
 }
 
-.container{
+.container {
   max-height: calc(100vh - 160px);
   overflow: scroll;
 }
 
 .footer {
-	position: absolute;
+  position: absolute;
   /* padding-top: 3px; */
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1abc9c;
 }
 
 .footer p {
-	margin-top: 25px;
-	font-size: 16px;
+  margin-top: 25px;
+  font-size: 16px;
   color: #fff;
 }
 
-.read-more{
-    color: #777777;
+.read-more {
+  color: #777777;
 }
 
-.read-more:hover{
-    color: #1abc9c;
+.read-more:hover {
+  color: #1abc9c;
 }
 
 @media only screen and (max-width: 768px) {
-  .container{
+  .container {
     max-height: calc(100vh - 280px);
     overflow: scroll;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hometext{
+    padding:5px;
+    margin:5px;
   }
 }
