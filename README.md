@@ -1,6 +1,5 @@
 # blog-website
 A blog website. Responsive over different screen sizes.<br />
-**As it is hosted on free to use service Glitch, it can take about 10-15 seconds for the website to wake up.**
 <br/>
 
 <img width="1440" alt="Screenshot 2022-01-11 at 3 45 07 PM" src="https://user-images.githubusercontent.com/71606419/148924488-3ed5cf33-0723-4d46-a436-3c859dd1ba25.png">
